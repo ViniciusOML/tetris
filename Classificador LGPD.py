@@ -145,7 +145,7 @@ bag_of_words = count_vectorizer.fit_transform(df['DISPOSITIVOS_PROC'])
 """# Quebrando o conjunto de treino e teste"""
 
 #Rodar este trecho para alterar a aleatoriedade da amostra
-
+seed = random.randint(1,999999)
 # Definindo tamanho da amostra que será usada para 80% treino e 20% teste 
 X_treino, X_teste, y_treino, y_teste = train_test_split(bag_of_words,
                                                               df.CLASSE,
